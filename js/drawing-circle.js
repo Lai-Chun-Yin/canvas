@@ -15,6 +15,7 @@ class DrawingCircle extends PaintFunction{
         this.contextDraft.ellipse(Math.round((this.origX+coord[0])/2),Math.round((this.origY+coord[1])/2),Math.round(Math.abs((coord[0]- this.origX)/2)),Math.round(Math.abs((coord[1] - this.origY)/2)),0,0, 2 * Math.PI);
         
         this.contextDraft.fill();
+        this.contextDraft.stroke();
         this.contextDraft.closePath();
     }
 
@@ -26,6 +27,7 @@ class DrawingCircle extends PaintFunction{
         this.contextReal.ellipse(Math.round((this.origX+coord[0])/2),Math.round((this.origY+coord[1])/2),Math.round(Math.abs((coord[0]- this.origX)/2)),Math.round(Math.abs((coord[1] - this.origY)/2)),0,0, 2 * Math.PI);
         
         this.contextReal.fill();
+        this.contextReal.stroke();
         this.contextReal.closePath();
     }
     onMouseLeave(){}
