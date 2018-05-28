@@ -54,7 +54,7 @@ body{
   #color-panel-stroke{
     left: 250px;
   }
-  .colorPanels-row {
+  .panel-row {
     display: flex;
     justify-content: space-between;
   }

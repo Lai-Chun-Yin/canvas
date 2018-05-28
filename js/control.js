@@ -11,6 +11,14 @@ $('#drawing-circle').click(()=>{
 $('#color-picker').click(() => {
     currentFunction = new ColorPicker(contextReal, contextDraft);
 });
+//for brush width handler
+var brushWidth = document.getElementById("brush-width");
+contextReal.lineWidth = this.value;
+contextDraft.lineWidth = this.value;
+brushWidth.oninput = function() {
+    contextReal.lineWidth = this.value;
+    contextDraft.lineWidth = this.value;
+}
 
 currentFunction = new DrawingRectangle(contextReal, contextDraft); 
 

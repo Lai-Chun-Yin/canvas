@@ -95,6 +95,15 @@ class ColorPanel {
 
     mouseup(e) {
         this.drag = false;
+        // close the color panel once selected
+        switch (this.target) {
+            case "fillStyle":
+            document.getElementById("color-toggle-fill").checked = false;
+            break;
+        case "strokeStyle":
+            document.getElementById("color-toggle-stroke").checked = false;
+            break;
+        }
     }
 
     changeColor(e) {

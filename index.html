@@ -25,12 +25,15 @@
                     <span class="btn btn-info fa fa-circle" id="drawing-circle">Drawing Circle</span>
                     <h4>Drawing Brushes</h4>
                     <span class="btn btn-info fa fa-paint-brush" id="drawing-line">Drawing Line</span>
-
+                    <div class="panel-row">
+                        <span>Brush Width:</span>
+                        <input type="range" min="1" max="10" value="2" class="slider" id="brush-width">
+                    </div>
                 </div>
                 <h4>Color Panels</h4>
                 <div id="colorPanels-container">
                     <!--Below is creating color panel for fill-->
-                    <div class="colorPanels-row">
+                    <div class="panel-row">
                         <span>Fill:</span>
                         <label for="color-toggle-fill" id="color-label-fill" style="background-color: black"></label>
                         <input type="checkbox" id="color-toggle-fill" class="color-input"></input>
@@ -42,7 +45,7 @@
                         </div>
                     </div>
                     <!--Below is creating color panel for stroke-->
-                    <div class="colorPanels-row">
+                    <div class="panel-row">
                         <span>Stroke:</span>
                         <label for="color-toggle-stroke" id="color-label-stroke" style="background-color: black"></label>
                         <input type="checkbox" id="color-toggle-stroke" class="color-input"></input>
@@ -53,21 +56,22 @@
                             <canvas id="color-strip-stroke" height="150" width="30"></canvas>
                         </div>
                     </div>
-                    <div class="colorPanels-row">
+                    <div class="panel-row">
                         <span class="btn btn-danger" id="color-picker">Color Picker</span>
                         <span>Fill color?</span>
                         <input type="checkbox" id="color-picker-toggle" data-toggle="toggle" data-on="Fill" data-off="Stroke" data-size="small">
-                        
-                    </label>
+
+                        </label>
                     </div>
                 </div>
                 <div id="function-row">
                     <h4>Functions:</h4>
-                    <span class="btn btn-success fa fa-save" id="save-image"><a id="save-link"></a>Save Image</span>
+                    <span class="btn btn-success fa fa-save" id="save-image">
+                        <a id="save-link"></a>Save Image</span>
                 </div>
                 <div id="filter-row">
                     <h4>Filters:</h4>
-                    
+
                 </div>
             </div>
             <!--
