@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Draft Canvas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2" id="control-panel">
+
+                <div class="buttons">
+                    <h4>Drawing Shapes</h4>
+                    <span class="btn btn-primary fa fa-square" id="drawing-rectangle">Drawing Rectangle</span>
+                    <span class="btn btn-info fa fa-circle" id="drawing-circle">Drawing Circle</span>
+                    <h4>Drawing Brushes</h4>
+                    <span class="btn btn-info fa fa-paint-brush" id="drawing-line">Drawing Line</span>
+
+                </div>
+                <h4>Color Panels</h4>
+                <div class="colorPanels-container">
+                    <!--Below is creating color panel for fill-->
+                    <div class="colorPanels-row">
+                        <span>Fill:</span>
+                        <label for="color-toggle-fill" id="color-label-fill" style="background-color: black"></label>
+                        <input type="checkbox" id="color-toggle-fill" class="color-input"></input>
+
+                        <div class="color-picker" id="color-panel-fill">
+                            <h6>Fill color:</h6>
+                            <canvas id="color-block-fill" height="150" width="150"></canvas>
+                            <canvas id="color-strip-fill" height="150" width="30"></canvas>
+                        </div>
+                    </div>
+                    <!--Below is creating color panel for stroke-->
+                    <div class="colorPanels-row">
+                        <span>Stroke:</span>
+                        <label for="color-toggle-stroke" id="color-label-stroke" style="background-color: black"></label>
+                        <input type="checkbox" id="color-toggle-stroke" class="color-input"></input>
+
+                        <div class="color-picker" id="color-panel-stroke">
+                            <h6>Stroke color:</h6>
+                            <canvas id="color-block-stroke" height="150" width="150"></canvas>
+                            <canvas id="color-strip-stroke" height="150" width="30"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+        
+            -->
+            <div class="col-lg-10">
+                <div id="canvas-container">
+                    <canvas id="canvas-real" class="canvas" width='1280px' height='720px'></canvas>
+                    <canvas id="canvas-draft" class="canvas" width='1280px' height='720px'></canvas>
+                </div>
+            </div>
+
+        </div>
+        <!--Close main row-->
+    </div>
+    <!--Close Container-Fluid-->
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/canvas-common.js"></script>
+    <script type='text/javascript' src="js/drawing-line.js"></script>
+    <script type='text/javascript' src="js/drawing-rectangle.js"></script>
+    <script type='text/javascript' src="js/drawing-circle.js"></script>
+    <script type='text/javascript' src="js/color-panel.js"></script>
+    <script type='text/javascript' src="js/control.js">
+        /*$('#drawing-rectangle').click(() => {
+            currentFunction = new DrawingRectangle(contextReal, contextDraft);
+        });
+        $('#drawing-line').click(() => {
+            currentFunction = new DrawingLine(contextReal, contextDraft);
+        });
+        currentFunction = new DrawingRectangle(contextReal, contextDraft); */
+    </script>
+</body>
+
+</html>

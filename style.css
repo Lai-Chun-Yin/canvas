@@ -1,0 +1,64 @@
+.canvas{
+    border:1px black dotted;
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px
+}
+
+#canvas-draft{
+    background-color: transparent;
+}
+body{
+    overflow:hidden;
+}
+#canvas-container{
+    height:720px;
+    position: relative;
+}  
+
+/* Below is for color panel*/
+.color-input {
+  display: none;
+}
+  #color-label-fill, #color-label-stroke {
+    margin-left: 15px;
+    display: inline-block;
+    height: 30px;
+    width: 50px;
+  } 
+  
+  #color-toggle-fill:checked ~ #color-panel-fill {
+    display: inline-block;
+  }
+  #color-toggle-stroke:checked ~ #color-panel-stroke {
+    display: inline-block;
+  }
+  .color-picker {
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    height: 180px;
+    width: 200px;
+    border: solid 1px #ccc;
+    display: none;
+    padding: 5px;
+  }
+  .color-picker canvas:hover {
+    cursor: crosshair;
+  }
+  #color-panel-fill {
+    left: 250px;
+  }
+  #color-panel-stroke{
+    left: 250px;
+  }
+  .colorPanels-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .color-picker h6{
+    margin:2px;
+    font-size:16px;
+  }
