@@ -1,11 +1,11 @@
 class ColorPanel {
 
-    constructor(colorBlockId, colorStripId, colorLabelId,target) {
+    constructor(colorBlockId, colorStripId, colorLabelId, target) {
         this.colorBlock = document.getElementById(colorBlockId);
         this.ctx1 = this.colorBlock.getContext('2d');
         this.width1 = this.colorBlock.width;
         this.height1 = this.colorBlock.height;
-        this.target=target;
+        this.target = target;
 
         this.colorStrip = document.getElementById(colorStripId);
         this.ctx2 = this.colorStrip.getContext('2d');
@@ -103,7 +103,7 @@ class ColorPanel {
         var imageData = this.ctx1.getImageData(this.x, this.y, 1, 1).data;
         this.rgbaColor = 'rgba(' + imageData[0] + ',' + imageData[1] + ',' + imageData[2] + ',1)';
         this.colorLabel.style.backgroundColor = this.rgbaColor;
-        updateColor(this.target,this.rgbaColor);
+        updateColor(this.target, this.rgbaColor);
     }
 
 }
@@ -113,26 +113,55 @@ canvasDraft.fillStyle = 'rgba(255, 0, 0, 1)';
 canvasReal.strokeStyle = 'rgba(255, 0, 0, 1)';
 canvasDraft.strokeStyle = 'rgba(255, 0, 0, 1)';
 // add color panels
-var colorFillPanel = new ColorPanel('color-block-fill', 'color-strip-fill', 'color-label-fill','fillStyle');
+var colorFillPanel = new ColorPanel('color-block-fill', 'color-strip-fill', 'color-label-fill', 'fillStyle');
 colorFillPanel.colorStrip.addEventListener("click", colorFillPanel, false);
 colorFillPanel.colorBlock.addEventListener("mousedown", colorFillPanel, false);
 colorFillPanel.colorBlock.addEventListener("mouseup", colorFillPanel, false);
 colorFillPanel.colorBlock.addEventListener("mousemove", colorFillPanel, false);
-var colorStrokePanel = new ColorPanel('color-block-stroke','color-strip-stroke','color-label-stroke','strokeStyle');
+var colorStrokePanel = new ColorPanel('color-block-stroke', 'color-strip-stroke', 'color-label-stroke', 'strokeStyle');
 colorStrokePanel.colorStrip.addEventListener("click", colorStrokePanel, false);
 colorStrokePanel.colorBlock.addEventListener("mousedown", colorStrokePanel, false);
 colorStrokePanel.colorBlock.addEventListener("mouseup", colorStrokePanel, false);
 colorStrokePanel.colorBlock.addEventListener("mousemove", colorStrokePanel, false);
 
-function updateColor(target,color){
+function updateColor(target, color) {
     switch (target) {
         case "fillStyle":
-        contextReal.fillStyle=color;
-        contextDraft.fillStyle=color;
-        break;
+            contextReal.fillStyle = color;
+            contextDraft.fillStyle = color;
+            break;
         case "strokeStyle":
-        contextReal.strokeStyle=color;
-        contextDraft.strokeStyle=color;
-        break;
+            contextReal.strokeStyle = color;
+            contextDraft.strokeStyle = color;
+            break;
     }
 }
+
+
+class ColorPicker extends PaintFunction{
+    constructor(contextReal,contextDraft){
+        super();
+        this.contextReal = contextReal;
+        this.contextDraft = contextDraft;  
+                 
+    }
+    onMouseDown(coord,event){
+        let x = coord[0];
+        let y = coord[1];
+        let imageData = this.contextReal.getImageData(x, y, 1, 1).data;
+        let rgbaColor = 'rgba(' + imageData[0] + ',' + imageData[1] + ',' + imageData[2] + ',1)';
+        if(document.getElementById('color-picker-toggle').checked){
+            colorFillPanel.colorLabel.style.backgroundColor = rgbaColor;
+            updateColor("fillStyle",rgbaColor);
+        } else {
+            colorStrokePanel.colorLabel.style.backgroundColor = rgbaColor;
+            updateColor("strokeStyle",rgbaColor);
+        }
+    }
+    onDragging(){}
+    onMouseMove(){}
+    onMouseUp(){}
+    onMouseLeave(){}
+    onMouseEnter(){}
+}
+

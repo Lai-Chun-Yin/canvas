@@ -8,6 +8,9 @@ $('#drawing-line').click(() => {
 $('#drawing-circle').click(()=>{
     currentFunction = new DrawingCircle(contextReal, contextDraft);
 });
+$('#color-picker').click(() => {
+    currentFunction = new ColorPicker(contextReal, contextDraft);
+});
 
 currentFunction = new DrawingRectangle(contextReal, contextDraft); 
 
