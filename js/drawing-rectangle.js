@@ -11,15 +11,15 @@ class DrawingRectangle extends PaintFunction{
     }
     onDragging(coord,event){
         this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
-        this.contextDraft.rect(this.origX,this.origY,coord[0]- this.origX,coord[1] - this.origY);
-        this.contextDraft.fill();
+        this.contextDraft.fillRect(this.origX,this.origY,coord[0]- this.origX,coord[1] - this.origY);
+        //this.contextDraft.fill();
     }
 
     onMouseMove(){}
     onMouseUp(coord){
         this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
-        this.contextReal.rect(this.origX,this.origY,coord[0]- this.origX,coord[1] - this.origY);
-        this.contextReal.fill();
+        this.contextReal.fillRect(this.origX,this.origY,coord[0]- this.origX,coord[1] - this.origY);
+        //this.contextReal.fill();
     }
     onMouseLeave(){}
     onMouseEnter(){}
