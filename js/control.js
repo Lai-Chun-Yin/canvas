@@ -4,6 +4,8 @@ $('#drawing-rectangle').click(() => {
 });
 $('#drawing-line').click(() => {
     currentFunction = new DrawingLine(contextReal, contextDraft);
+});$('#drawing-straight-line').click(() => {
+    currentFunction = new DrawingStraightLine(contextReal, contextDraft);
 });
 $('#drawing-circle').click(()=>{
     currentFunction = new DrawingCircle(contextReal, contextDraft);
