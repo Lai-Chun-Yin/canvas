@@ -1,17 +1,26 @@
 
 $('#drawing-rectangle').click(() => {
     currentFunction = new DrawingRectangle(contextReal, contextDraft);
+    contextReal.globalCompositeOperation="source-over";
 });
 $('#drawing-line').click(() => {
     currentFunction = new DrawingLine(contextReal, contextDraft);
+    contextReal.globalCompositeOperation="source-over";
 });$('#drawing-straight-line').click(() => {
     currentFunction = new DrawingStraightLine(contextReal, contextDraft);
+    contextReal.globalCompositeOperation="source-over";
 });
 $('#drawing-circle').click(()=>{
     currentFunction = new DrawingCircle(contextReal, contextDraft);
+    contextReal.globalCompositeOperation="source-over";
 });
 $('#color-picker').click(() => {
     currentFunction = new ColorPicker(contextReal, contextDraft);
+    contextReal.globalCompositeOperation="source-over";
+});
+$('#eraser').click(()=>{
+    currentFunction = new DrawingLine(contextReal, contextDraft);
+    contextReal.globalCompositeOperation="destination-out";
 });
 //for brush width handler
 var brushWidth = document.getElementById("brush-width");
@@ -21,6 +30,7 @@ brushWidth.oninput = function() {
     contextReal.lineWidth = this.value;
     contextDraft.lineWidth = this.value;
 }
+//end of brush width handler
 
 currentFunction = new DrawingRectangle(contextReal, contextDraft); 
 
