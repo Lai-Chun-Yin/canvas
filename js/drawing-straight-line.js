@@ -26,6 +26,7 @@ class DrawingStraightLine extends PaintFunction {
     onMouseUp(coord) {
         this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
         this.drawReal(coord[0], coord[1]);
+        cAddStep();
     }
     onMouseLeave() { }
     onMouseEnter() { }

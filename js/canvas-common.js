@@ -41,7 +41,7 @@
         let mouseY = e.pageY - canvasRec.top;
         currentFunction.onMouseUp([mouseX,mouseY],e);
         //for tracking action on canvas
-        if(!(currentFunction instanceof ColorPicker)){cAddStep();}
+        //if(!(currentFunction instanceof ColorPicker)){cAddStep();}
     });
     
     $('#canvas-draft').mouseleave(function(e){

@@ -38,6 +38,7 @@ class DrawingPolygon extends PaintFunction{
             this.drawing=false;
             this.stopX=undefined;
             this.stopY=undefined;
+            cAddStep();
         }else{
         this.drawReal(coord[0], coord[1]);}
     }
