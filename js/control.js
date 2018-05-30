@@ -10,6 +10,10 @@ $('#drawing-line').click(() => {
     currentFunction = new DrawingStraightLine(contextReal, contextDraft);
     contextReal.globalCompositeOperation="source-over";
 });
+$('#drawing-curve').click(()=>{
+    currentFunction = new DrawingBezierCurve(contextReal, contextDraft);
+    contextReal.globalCompositeOperation="source-over";
+});
 $('#drawing-circle').click(()=>{
     currentFunction = new DrawingCircle(contextReal, contextDraft);
     contextReal.globalCompositeOperation="source-over";
