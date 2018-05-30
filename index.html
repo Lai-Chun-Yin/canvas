@@ -23,6 +23,7 @@
                     <h4>Drawing Shapes</h4>
                     <span class="btn btn-primary fa fa-square" id="drawing-rectangle">Drawing Rectangle</span>
                     <span class="btn btn-info fa fa-circle" id="drawing-circle">Drawing Circle</span>
+                    <span class="btn btn-info" id="drawing-polygon">Drawing Polygon</span>
                     <h4>Drawing Brushes</h4>
                     <span class="btn btn-info fa fa-paint-brush" id="drawing-line">Drawing Line</span>
                     <span class="btn btn-info fa fa-paint-brush" id="drawing-straight-line">Drawing Staight Line</span>
@@ -70,6 +71,8 @@
                     <h4>Functions:</h4>
                     <span class="btn btn-success fa fa-save" id="save-image">
                         <a id="save-link"></a>Save Image</span>
+                    <span class="btn btn-success fa fa-undo" id="undo">Undo</span>
+                    <span class="btn btn-success fa fa-redo" id="redo">Redo</span>
                 </div>
                 <div id="filter-row">
                     <h4>Filters:</h4>
@@ -99,6 +102,7 @@
     <script type='text/javascript' src="js/drawing-straight-line.js"></script>
     <script type='text/javascript' src="js/drawing-rectangle.js"></script>
     <script type='text/javascript' src="js/drawing-circle.js"></script>
+    <script type='text/javascript' src="js/drawing-polygon.js"></script>
     <script type='text/javascript' src="js/color-panel.js"></script>
     <script type='text/javascript' src="js/control.js">
         /*$('#drawing-rectangle').click(() => {
