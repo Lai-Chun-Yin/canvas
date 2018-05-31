@@ -52,6 +52,20 @@ $('#save-image').click(()=>{
     link.setAttribute('href', canvasReal.toDataURL("image/png").replace("image/png", "image/octet-stream"));
     link.click();
 });
+$('#load-image').click(()=>{
+    let loadUrl = prompt("Please enter the photo URL:", "https://picsum.photos/400/300");
+    getStepImage(loadUrl).then(function(image){
+        contextReal.clearRect(0,0,canvasReal.width,canvasReal.height);
+        canvasDraft.width=image.width;
+        canvasDraft.height=image.height;
+        canvasReal.width=image.width;
+        canvasReal.height=image.height;
+        /*contextReal = canvasReal.getContext('2d');
+        contextDraft = canvasDraft.getContext('2d');*/
+        contextReal.drawImage(image,0,0);
+        
+    }).catch(function(url){alert('The URL entered is invalid')});
+});
 
 let imageObj = new Image();
 $('#undo').click(()=>{
@@ -82,5 +96,6 @@ function getStepImage(url){
             reject(url);
         }
         imageObj.src = url;
+        imageObj.crossOrigin = "Anonymous";
     })
 }

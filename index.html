@@ -72,12 +72,15 @@
                     <h4>Functions:</h4>
                     <span class="btn btn-success fa fa-save" id="save-image">
                         <a id="save-link"></a>Save Image</span>
+                    <span class="btn btn-success fa fa-upload" id="load-image">Load Image</span>
                     <span class="btn btn-success fa fa-undo" id="undo">Undo</span>
                     <span class="btn btn-success fa fa-redo" id="redo">Redo</span>
                 </div>
                 <div id="filter-row">
                     <h4>Filters:</h4>
-
+                    <span class="btn btn-warning" id="grayScale-filter">Gray Scale</span>
+                    <span class="btn btn-warning" id="threshold-filter">Threshold</span>
+                    <span class="btn btn-warning" id="brightness-filter">Brightness</span>
                 </div>
             </div>
             <!--
@@ -106,6 +109,7 @@
     <script type='text/javascript' src="js/drawing-circle.js"></script>
     <script type='text/javascript' src="js/drawing-polygon.js"></script>
     <script type='text/javascript' src="js/color-panel.js"></script>
+    <script type='text/javascript' src="js/image-filters.js"></script>
     <script type='text/javascript' src="js/control.js">
         /*$('#drawing-rectangle').click(() => {
             currentFunction = new DrawingRectangle(contextReal, contextDraft);
