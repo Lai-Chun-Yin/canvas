@@ -20,17 +20,20 @@
 
                 <div id="draw-buttons">
                     <h4>Drawing Shapes</h4>
-                    <span class="btn btn-info" id="drawing-rectangle"><img src="icon/noun_6400.svg">></span>
-                    <span class="btn btn-info" id="drawing-circle"><!--Drawing Circle--></span>
-                    <span class="btn btn-info" id="drawing-polygon"><img src="icon/6400-200.png"></span>
+                    <span class="btn btn-info" id="drawing-rectangle"><img src="icon/noun_1173644_cc.svg"></span>
+                    <span class="btn btn-info" id="drawing-circle"><img src="icon/noun_12975_cc.svg"></span>
+                    <span class="btn btn-info" id="drawing-polygon"><img src="icon/noun_1700196_cc.svg"></span>
                     <h4>Drawing Brushes</h4>
-                    <span class="btn btn-info fas fa-pencil-alt" id="drawing-line">Drawing Line</span>
-                    <span class="btn btn-info fa fa-paint-brush" id="drawing-straight-line">Drawing Staight Line</span>
-                    <span class="btn btn-info fa fa-paint-brush" id="drawing-quadratic-curve">Drawing Quadratic Curve</span>
-                    <span class="btn btn-info fa fa-paint-brush" id="drawing-bezier-curve">Drawing Bezier Curve</span>
-                    <span class="btn btn-info fa fa-paint-brush" id="drawing-bubbles">Drawing Bubbles</span>
-                    <span class="btn btn-info " id="drawing-curve">Drawing Curve</span>
-                    <span class="btn btn-info fa fa-eraser" id="eraser">Eraser</span>
+                    <div class="top-row">
+                    <span class="btn btn-info" id="drawing-line"><img src="icon/noun_601785_cc.svg"></span>
+                    <span class="btn btn-info" id="drawing-straight-line"><img src="icon/noun_79459_cc.svg"></span>
+                    <span class="btn btn-info" id="drawing-quadratic-curve"><img src="icon/noun_919804_cc.svg"></span>
+                    </div>
+                    <div class="bottom-row">
+                    <span class="btn btn-info" id="drawing-bubbles"><img src="icon/noun_912625_cc.svg"></span>
+                    <span class="btn btn-info" id="drawing-curve"><img src="icon/noun_1119840_cc.svg"></span>
+                    <span class="btn btn-info" id="eraser"><img src="icon/noun_75538_cc.svg"></span>
+                    </div>
                     <div class="panel-row">
                         <span>Brush Width:</span>
                         <input type="range" min="1" max="10" value="2" class="slider" id="brush-width">
@@ -72,19 +75,29 @@
                 </div>
                 <div id="function-row">
                     <h4>Functions:</h4>
-                    <span class="btn btn-success fa fa-save" id="save-image">
-                        <a id="save-link"></a>Save Image</span>
-                    <span class="btn btn-success fa fa-upload" id="load-image">Load Image</span>
-                    <span class="btn btn-success fa fa-undo" id="undo">Undo</span>
-                    <span class="btn btn-success fa fa-redo" id="redo">Redo</span>
-                    <span class="btn btn-success fa fa-trash" id="clear-image">Clear Image</span>
-
+                    <div class="top-row">
+                    <span class="btn btn-success" id="undo"><img src="icon/noun_1672217_cc.svg"></span>
+                    <span class="btn btn-success" id="redo"><img src="icon/noun_1672209_cc.svg"></span>
+                    <span class="btn btn-success" id="clear-image"><img src="icon/noun_77956_cc.svg"></span>
+                    </div>
+                    <div class="bottom-row">
+                    <span class="btn btn-success" id="save-image">
+                        <a id="save-link"></a><img src="icon/noun_858111_cc.svg"></span>
+                    <span class="btn btn-success" id="load-image"><img src="icon/noun_533155_cc.svg"></span>
+                    <span class="btn btn-success" id="resize"><img src="icon/noun_1681502_cc.svg"></span>
+                    </div>
                 </div>
                 <div id="filter-row">
                     <h4>Filters:</h4>
-                    <span class="btn btn-warning" id="grayScale-filter">Gray Scale</span>
-                    <span class="btn btn-warning" id="threshold-filter">Threshold</span>
-                    <span class="btn btn-warning" id="brightness-filter">Brightness</span>
+                    <div>
+                        <span class="btn btn-warning" id="grayScale-filter">Gray Scale</span>
+                    </div>
+                    <div>
+                        <span class="btn btn-warning" id="threshold-filter">Threshold</span>
+                    </div>
+                    <div>
+                        <span class="btn btn-warning" id="brightness-filter">Brightness</span>
+                    </div>
                 </div>
             </div>
             <!--
@@ -109,7 +122,6 @@
     <script type='text/javascript' src="js/drawing-line.js"></script>
     <script type='text/javascript' src="js/drawing-straight-line.js"></script>
     <script type='text/javascript' src="js/drawing-quadratic-curve.js"></script>
-    <script type='text/javascript' src="js/drawing-bezier-curve.js"></script>
     <script type='text/javascript' src="js/drawing-bubbles.js"></script>
     <script type='text/javascript' src="js/drawing-bezierCurve.js"></script>
     <script type='text/javascript' src="js/drawing-rectangle.js"></script>

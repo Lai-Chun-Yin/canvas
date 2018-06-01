@@ -26,7 +26,7 @@ class DrawingBubbles extends PaintFunction{
         this.points.push({ 
             x: coord[0], 
             y: coord[1],
-            radius: this.getRandomInt(this.context.lineWidth, 3*this.context.lineWidth), //CAN CHANGE BUBBLE RELATIVE SIZE WITH COEF
+            radius: this.getRandomInt(3*this.context.lineWidth, 10*this.context.lineWidth), //CAN CHANGE BUBBLE RELATIVE SIZE WITH COEF
             opacity: Math.random()*0.03
         });
           for (var i = 0; i < this.points.length; i++) {
