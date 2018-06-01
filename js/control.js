@@ -64,6 +64,13 @@ $('#save-image').click(()=>{
     link.setAttribute('href', canvasReal.toDataURL("image/png").replace("image/png", "image/octet-stream"));
     link.click();
 });
+
+$('#clear-image').click(() => {
+    contextReal.clearRect(0, 0, canvasReal.width, canvasReal.height);
+    contextReal.globalCompositeOperation="source-over";
+    cAddStep();
+});
+
 $('#load-image').click(()=>{
     let loadUrl = prompt("Please enter the photo URL:", "https://picsum.photos/400/300");
     getStepImage(loadUrl).then(function(image){
