@@ -4,8 +4,18 @@ $('#drawing-rectangle').click(() => {
 });
 $('#drawing-line').click(() => {
     currentFunction = new DrawingLine(contextReal, contextDraft);
-});$('#drawing-straight-line').click(() => {
-    currentFunction = new DrawingStraightLine(contextReal, contextDraft);
+});
+$('#drawing-straight-line').click(() => {
+    currentFunction = new DrawingStraightLine(contextReal, contextDraft); 
+});
+$('#drawing-quadratic-curve').click(() => {
+    currentFunction = new DrawingQuadraticCurve(contextReal, contextDraft);
+});
+$('#drawing-bezier-curve').click(() => {
+    currentFunction = new DrawingBezierCurve(contextReal, contextDraft);
+});
+$('#drawing-bubbles').click(() => {
+    currentFunction = new DrawingBubbles(contextReal, contextDraft);
 });
 $('#drawing-circle').click(()=>{
     currentFunction = new DrawingCircle(contextReal, contextDraft);
@@ -25,6 +35,8 @@ brushWidth.oninput = function() {
 currentFunction = new DrawingRectangle(contextReal, contextDraft); 
 
 currentFillColor = 'rgba(255,0,0,1)';
+
+
 
 $('#save-image').click(()=>{
     let link = document.getElementById('save-link');
