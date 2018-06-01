@@ -12,9 +12,6 @@ $('#drawing-straight-line').click(() => {
 $('#drawing-quadratic-curve').click(() => {
     currentFunction = new DrawingQuadraticCurve(contextReal, contextDraft);
 });
-// $('#drawing-bezier-curve').click(() => {
-//     currentFunction = new DrawingBezierCurve(contextReal, contextDraft);
-// });
 $('#drawing-bubbles').click(() => {
     currentFunction = new DrawingBubbles(contextReal, contextDraft);
     contextReal.globalCompositeOperation="source-over";
