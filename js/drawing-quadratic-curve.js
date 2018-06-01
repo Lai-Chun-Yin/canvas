@@ -33,6 +33,20 @@ class DrawingQuadraticCurve extends PaintFunction{
             this.contextDraft.quadraticCurveTo(this.origX,this.origY,this.endX,this.endY);
             this.contextDraft.stroke();
             console.log('test1');
+        }
+        // else if (this.actionCounter === 1){
+        //     this.cpX = coord[0];
+        //     this.cpY = coord[1];
+        //     this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
+        //     this.contextDraft.beginPath();
+        //     this.contextDraft.moveTo(this.origX,this.origY);
+        //     this.contextDraft.quadraticCurveTo(this.cpX,this.cpY,this.endX,this.endY);
+        //     this.contextDraft.stroke();
+        //     console.log('test2');
+        // }
+    }
+    onMouseMove(coord,event){
+        if(this.actionCounter === 0){
         } else if (this.actionCounter === 1){
             this.cpX = coord[0];
             this.cpY = coord[1];
@@ -52,6 +66,7 @@ class DrawingQuadraticCurve extends PaintFunction{
             this.contextReal.quadraticCurveTo(this.cpX,this.cpY,this.endX,this.endY);
             this.contextReal.stroke();
             this.actionCounter = 0;
+            cAddStep();
             // this.onFinish();
         }
     }
