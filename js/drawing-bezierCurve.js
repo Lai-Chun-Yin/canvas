@@ -32,7 +32,7 @@ class DrawingBezierCurve extends PaintFunction {
             this.contextDraft.beginPath();
             this.contextDraft.moveTo(this.origX, this.origY);
             if (this.controlPoints.length == 1) {
-                this.contextDraft.bezierCurveTo( coord[0], coord[1],this.controlPoints[0][0], this.controlPoints[0][1], this.endPointX, this.endPointY);
+                this.contextDraft.bezierCurveTo( this.controlPoints[0][0], this.controlPoints[0][1], coord[0], coord[1], this.endPointX, this.endPointY);
             } else {
                 this.contextDraft.quadraticCurveTo(coord[0], coord[1], this.endPointX, this.endPointY);
             }
@@ -49,7 +49,7 @@ class DrawingBezierCurve extends PaintFunction {
             this.controlPoints.push([coord[0], coord[1]]);
             if (this.controlPoints.length > 1) {
                 this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
-                this.contextReal.bezierCurveTo(this.controlPoints[1][0],this.controlPoints[1][1],this.controlPoints[0][0],this.controlPoints[0][1],this.endPointX,this.endPointY);
+                this.contextReal.bezierCurveTo(this.controlPoints[0][0],this.controlPoints[0][1],this.controlPoints[1][0],this.controlPoints[1][1],this.endPointX,this.endPointY);
                 this.contextReal.stroke();
                 this.contextReal.closePath();
                 this.controlPoints.length=0;

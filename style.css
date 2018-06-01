@@ -18,6 +18,18 @@ body{
     position: relative;
 }  
 
+/* Buttons
+.btn {
+  height: 50px;
+  width: 50px;
+  font-size: 30px;
+}
+
+#drawing-polygon img{
+  height: 20px;
+  width: 20px;
+} */
+
 /* Below is for color panel*/
 .color-input {
   display: none;
