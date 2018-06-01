@@ -6,6 +6,15 @@
     
     let currentFunction;
     let dragging = false;
+
+    //for tracking action on canvas
+    let cPushArray = new Array();
+    let cStep = -1;
+    let cAddStep = function(){
+        cStep++;
+        if (cStep < cPushArray.length) { cPushArray.length = cStep; }
+        cPushArray.push(canvasReal.toDataURL("image/png"));
+    }
     
     $('#canvas-draft').mousedown(function(e){
         let canvasRec = this.getBoundingClientRect();
@@ -31,6 +40,8 @@
         let mouseX = e.pageX - canvasRec.left;
         let mouseY = e.pageY - canvasRec.top;
         currentFunction.onMouseUp([mouseX,mouseY],e);
+        //for tracking action on canvas
+        //if(!(currentFunction instanceof ColorPicker)){cAddStep();}
     });
     
     $('#canvas-draft').mouseleave(function(e){

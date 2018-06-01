@@ -16,7 +16,8 @@ class DrawingLine extends PaintFunction{
     }
 
     onMouseMove(){}
-    onMouseUp(){}
+    onMouseUp(
+    ){cAddStep();}
     onMouseLeave(){}
     onMouseEnter(){}
 
@@ -24,6 +25,6 @@ class DrawingLine extends PaintFunction{
         this.context.lineTo(x,y);
         this.context.moveTo(x,y);
         this.context.closePath();
-        this.context.stroke();    
+        this.context.stroke();  
     }
 }

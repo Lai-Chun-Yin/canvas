@@ -23,12 +23,15 @@
                     <h4>Drawing Shapes</h4>
                     <span class="btn btn-primary fa fa-square" id="drawing-rectangle">Drawing Rectangle</span>
                     <span class="btn btn-info fa fa-circle" id="drawing-circle">Drawing Circle</span>
+                    <span class="btn btn-info" id="drawing-polygon">Drawing Polygon</span>
                     <h4>Drawing Brushes</h4>
                     <span class="btn btn-info fa fa-paint-brush" id="drawing-line">Drawing Line</span>
                     <span class="btn btn-info fa fa-paint-brush" id="drawing-straight-line">Drawing Staight Line</span>
                     <span class="btn btn-info fa fa-paint-brush" id="drawing-quadratic-curve">Drawing Quadratic Curve</span>
                     <span class="btn btn-info fa fa-paint-brush" id="drawing-bezier-curve">Drawing Bezier Curve</span>
                     <span class="btn btn-info fa fa-paint-brush" id="drawing-bubbles">Drawing Bubbles</span>
+                    <span class="btn btn-info " id="drawing-curve">Drawing Curve</span>
+                    <span class="btn btn-info fa fa-eraser" id="eraser">Eraser</span>
                     <div class="panel-row">
                         <span>Brush Width:</span>
                         <input type="range" min="1" max="10" value="2" class="slider" id="brush-width">
@@ -72,10 +75,15 @@
                     <h4>Functions:</h4>
                     <span class="btn btn-success fa fa-save" id="save-image">
                         <a id="save-link"></a>Save Image</span>
+                    <span class="btn btn-success fa fa-upload" id="load-image">Load Image</span>
+                    <span class="btn btn-success fa fa-undo" id="undo">Undo</span>
+                    <span class="btn btn-success fa fa-redo" id="redo">Redo</span>
                 </div>
                 <div id="filter-row">
                     <h4>Filters:</h4>
-
+                    <span class="btn btn-warning" id="grayScale-filter">Gray Scale</span>
+                    <span class="btn btn-warning" id="threshold-filter">Threshold</span>
+                    <span class="btn btn-warning" id="brightness-filter">Brightness</span>
                 </div>
             </div>
             <!--
@@ -102,9 +110,12 @@
     <script type='text/javascript' src="js/drawing-quadratic-curve.js"></script>
     <script type='text/javascript' src="js/drawing-bezier-curve.js"></script>
     <script type='text/javascript' src="js/drawing-bubbles.js"></script>
+    <script type='text/javascript' src="js/drawing-bezierCurve.js"></script>
     <script type='text/javascript' src="js/drawing-rectangle.js"></script>
     <script type='text/javascript' src="js/drawing-circle.js"></script>
+    <script type='text/javascript' src="js/drawing-polygon.js"></script>
     <script type='text/javascript' src="js/color-panel.js"></script>
+    <script type='text/javascript' src="js/image-filters.js"></script>
     <script type='text/javascript' src="js/control.js">
         /*$('#drawing-rectangle').click(() => {
             currentFunction = new DrawingRectangle(contextReal, contextDraft);

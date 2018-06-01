@@ -22,6 +22,7 @@ class DrawingRectangle extends PaintFunction{
         this.contextReal.fillRect(this.origX,this.origY,coord[0]- this.origX,coord[1] - this.origY);
         this.contextReal.strokeRect(this.origX,this.origY,coord[0]- this.origX,coord[1] - this.origY)
         //this.contextReal.fill();
+        cAddStep();
     }
     onMouseLeave(){}
     onMouseEnter(){}
