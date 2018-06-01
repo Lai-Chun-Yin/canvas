@@ -5,12 +5,15 @@ $('#drawing-rectangle').click(() => {
 });
 $('#drawing-line').click(() => {
     currentFunction = new DrawingLine(contextReal, contextDraft);
+    contextReal.globalCompositeOperation="source-over";
 });
 $('#drawing-straight-line').click(() => {
-    currentFunction = new DrawingStraightLine(contextReal, contextDraft); 
+    currentFunction = new DrawingStraightLine(contextReal, contextDraft);
+    contextReal.globalCompositeOperation="source-over"; 
 });
 $('#drawing-quadratic-curve').click(() => {
     currentFunction = new DrawingQuadraticCurve(contextReal, contextDraft);
+    contextReal.globalCompositeOperation="source-over";
 });
 // $('#drawing-bezier-curve').click(() => {
 //     currentFunction = new DrawingBezierCurve(contextReal, contextDraft);
