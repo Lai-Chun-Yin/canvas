@@ -14,25 +14,51 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-2" id="control-panel">
-
+    
+            <div id="control-panel">
+                <h1>My Canvas</h1>
                 <div id="draw-buttons">
                     <h4>Drawing Shapes</h4>
-                    <span class="btn btn-info" id="drawing-rectangle"><img src="icon/noun_1173644_cc.svg"></span>
-                    <span class="btn btn-info" id="drawing-circle"><img src="icon/noun_12975_cc.svg"></span>
-                    <span class="btn btn-info" id="drawing-polygon"><img src="icon/noun_1700196_cc.svg"></span>
+                    <label class="button-container">
+                        <input type="radio" name="draw" checked="checked">
+                        <span class="btn btn-info" id="drawing-rectangle"><img src="icon/noun_1173644_cc.svg"></span>
+                    </label>
+                    <label class="button-container">
+                        <input type="radio" name="draw">
+                        <span class="btn btn-info" id="drawing-circle"><img src="icon/noun_12975_cc.svg"></span>
+                    </label>
+                    <label class="button-container">
+                        <input type="radio" name="draw">
+                        <span class="btn btn-info" id="drawing-polygon"><img src="icon/noun_1700196_cc.svg"></span>
+                    </label>
                     <h4>Drawing Brushes</h4>
                     <div class="top-row">
-                    <span class="btn btn-info" id="drawing-line"><img src="icon/noun_601785_cc.svg"></span>
-                    <span class="btn btn-info" id="drawing-straight-line"><img src="icon/noun_79459_cc.svg"></span>
-                    <span class="btn btn-info" id="drawing-quadratic-curve"><img src="icon/noun_919804_cc.svg"></span>
+                        <label class="button-container">
+                            <input type="radio" name="draw">
+                            <span class="btn btn-info" id="drawing-line"><img src="icon/noun_601785_cc.svg"></span>
+                        </label>
+                        <label class="button-container">
+                            <input type="radio" name="draw">
+                            <span class="btn btn-info" id="drawing-straight-line"><img src="icon/noun_79459_cc.svg"></span>
+                        </label>
+                        <label class="button-container">
+                            <input type="radio" name="draw">
+                            <span class="btn btn-info" id="drawing-quadratic-curve"><img src="icon/noun_919804_cc.svg"></span>
+                        </label>
                     </div>
                     <div class="bottom-row">
-                    <span class="btn btn-info" id="drawing-bubbles"><img src="icon/noun_912625_cc.svg"></span>
-                    <span class="btn btn-info" id="drawing-curve"><img src="icon/noun_1119840_cc.svg"></span>
-                    <span class="btn btn-info" id="eraser"><img src="icon/noun_75538_cc.svg"></span>
+                        <label class="button-container">
+                            <input type="radio" name="draw">
+                            <span class="btn btn-info" id="drawing-bubbles"><img src="icon/noun_912625_cc.svg"></span>
+                        </label>
+                        <label class="button-container">
+                            <input type="radio" name="draw">
+                            <span class="btn btn-info" id="drawing-curve"><img src="icon/noun_1119840_cc.svg"></span>
+                        </label>
+                        <label class="button-container">
+                            <input type="radio" name="draw">
+                            <span class="btn btn-info" id="eraser"><img src="icon/noun_75538_cc.svg"></span>
+                        </label>
                     </div>
                     <div class="panel-row">
                         <span>Brush Width:</span>
@@ -66,7 +92,10 @@
                         </div>
                     </div>
                     <div class="panel-row">
-                        <span class="btn btn-danger" id="color-picker">Color Picker</span>
+                        <label class="button-container">
+                            <input type="radio" name="draw">
+                            <span class="btn btn-info" id="color-picker"><img src="icon/color-dropper.png"></span>
+                        </label>
                         <span>Fill color?</span>
                         <input type="checkbox" id="color-picker-toggle" data-toggle="toggle" data-on="Fill" data-off="Stroke" data-size="small">
 
@@ -103,17 +132,13 @@
             <!--
         
             -->
-            <div class="col-lg-10">
+            
                 <div id="canvas-container">
-                    <canvas id="canvas-real" class="canvas" width='1280px' height='720px'></canvas>
-                    <canvas id="canvas-draft" class="canvas" width='1280px' height='720px'></canvas>
+                    <canvas id="canvas-real" class="canvas" width='800px' height='600px'></canvas>
+                    <canvas id="canvas-draft" class="canvas" width='800px' height='600px'></canvas>
                 </div>
-            </div>
+            
 
-        </div>
-        <!--Close main row-->
-    </div>
-    <!--Close Container-Fluid-->
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"

@@ -1,21 +1,62 @@
+@font-face {
+  font-family: 'KGTangled'; /*a name to be used later*/
+  src: url("./font/kg-tangled-up-in-you.2.ttf"); /*URL to font*/
+}
+@font-face {
+  font-family: 'VTCAllSkratched'; /*a name to be used later*/
+  src: url("./font/vtcallskratchedupone.regular.ttf"); /*URL to font*/
+}
+
 .canvas{
-    border:1px black dotted;
+    border:1px #bbb inset;
     position:absolute;
     top:0px;
     bottom:0px;
     left:0px;
-    right:0px
+    right:0px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: crosshair;
+}
+h1{
+  font-family: 'VTCAllSkratched';
+}
+
+#control-panel {
+  background-color: #040;
+  color: #ddd;
+  height: 100vh;
+  width: 180px;
+  position: fixed;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
 
 #canvas-draft{
     background-color: transparent;
+    z-index: 2;
+}
+#canvas-real{
+  background-color: white;
 }
 body{
     overflow:hidden;
+    font-family: 'KGTangled';
 }
 #canvas-container{
-    height:720px;
-    position: relative;
+  height:100vh;
+  width: 100vw;
+  left: 90px;
+  position: relative;
+  background: url("nature-old-paper-texture-or-background-video-animation_rpgwk8rom__F0000.png") repeat-y center;
 }  
 
 .bottom-row, .top-row{
@@ -46,22 +87,23 @@ body{
   }
   .color-picker {
     position: absolute;
+    background: url("./image/postit.png") no-repeat center;
+    background-size: contain;
     z-index: 2;
-    background-color: white;
-    height: 180px;
-    width: 200px;
-    border: solid 1px #ccc;
+    height: 210px;
+    width: 210px;
+    color: black;
     display: none;
-    padding: 5px;
+    padding: 10px;
   }
   .color-picker canvas:hover {
     cursor: crosshair;
   }
   #color-panel-fill {
-    left: 250px;
+    left: 180px;
   }
   #color-panel-stroke{
-    left: 250px;
+    left: 180px;
   }
   .panel-row {
     display: flex;
@@ -75,4 +117,13 @@ body{
   #filter-row span {
     width: 150px;
     margin-top: 3px;
+  }
+
+  /* Hide the browser's default radio button */
+  #control-panel input[type='radio'] {
+    position: absolute;
+    opacity: 0;
+  }
+  .button-container>input[type='radio']:checked ~ .btn {
+    border: 2px solid #ddd;
   }

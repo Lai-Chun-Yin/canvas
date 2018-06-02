@@ -13,3 +13,7 @@ Undo by shashank singh from the Noun Project
 redo by shashank singh from the Noun Project
 Trash by Anusha Narvekar from the Noun Project
 Resize by Deemak Daksina from the Noun Project
+
+Fonts:
+"VTC All Skratched Up One Font" by Larry E. Yerkes,Vigilante Typeface Corporation,WolfBainx and Associates.
+"KG Tangled Up In You" by Kimberly Geswein.

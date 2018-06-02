@@ -87,6 +87,18 @@ $('#load-image').click(()=>{
     }).catch(function(url){alert('The URL entered is invalid')});
 });
 
+$('#resize').click(() => {
+    let input = prompt("Please enter the new canvas size:", "1280x720");
+    let re = /(\d+)x(\d+)/;
+    let canvasSize = input.match(re);
+    console.log(canvasSize);
+    canvasSize.forEach((size) => { parseInt(size); });
+    canvasDraft.width = canvasSize[1];
+    canvasDraft.height = canvasSize[2];
+    canvasReal.width = canvasSize[1];
+    canvasReal.height = canvasSize[2];
+});
+
 let imageObj = new Image();
 $('#undo').click(()=>{
     if(cStep>0){
@@ -119,3 +131,5 @@ function getStepImage(url){
         imageObj.crossOrigin = "Anonymous";
     })
 }
+
+cAddStep();
